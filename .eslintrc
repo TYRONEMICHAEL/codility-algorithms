@@ -5,6 +5,7 @@
   "rules": {
     "quotes": [2, "single"],
     "strict": [2, "never"],
-    "semi": [2, "always"]
+    "semi": [2, "always"],
+    "indent": [2, 2]
   }
 }
