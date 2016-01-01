@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "node ./test/index.js | tap-spec",
-    "test:watch": "chokidar 'test/**/*.js' 'src/**/*.js' --command 'npm run test --silent' --initial 'npm run test --silent'"
+    "test:watch": "chokidar 'test/**/*.js' 'src/**/*.js' --command 'npm run test --silent' --initial 'npm run test --silent'",
+    "coverage": "istanbul cover ./test/index.js"
   },
   "author": "Tyrone Michael Avnit <tyronemichael@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "chokidar-cli": "^1.2.0",
     "eslint": "^1.10.3",
+    "istanbul": "^0.4.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.4.0"
   }
