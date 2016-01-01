@@ -1,7 +1,7 @@
 {
   "name": "codility-lessons",
   "version": "0.1.0",
-  "description": "Solutions in JS for codility lessons (https://codility.com/programmers/lessons/)",
+  "description": "Solutions written in JS for Codility Lessons (https://codility.com/programmers/lessons/)",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/index.js | tap-spec",
