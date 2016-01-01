@@ -1,5 +1,7 @@
 // GenomicRangeQuery
-// Find the minimal nucleotide from a range of sequence DNA.
+
+// Description: Find the minimal nucleotide from a range of sequence DNA.
+// URL: https://codility.com/programmers/task/genomic_range_query/
 // Score: 100%
 
 module.exports = function solution(S, P, Q) {
