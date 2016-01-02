@@ -1,4 +1,6 @@
 // ITERATIONS
 require('./iterations/BinaryGap.spec');
-// PREFIX SUMS
+// ARRAYS
+require('./arrays/OddOccurrencesInArray.spec');
+// // PREFIX SUMS
 require('./prefix_sums/GenomicRangeQuery.spec');

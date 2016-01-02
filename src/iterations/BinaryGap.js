@@ -1,6 +1,6 @@
 // BinaryGap
 // Find longest sequence of zeros in binary representation of an integer.
-// Score: 100%
+// Score: 100% https://codility.com/demo/results/training8MWRRC-ESS/
 
 module.exports = function solution(N) {
   var binary = N.toString(2);

@@ -1,6 +1,6 @@
 // GenomicRangeQuery
 // Find the minimal nucleotide from a range of sequence DNA.
-// Score: 100%
+// Score: 100% https://codility.com/demo/results/trainingE96QUA-CCT/
 
 module.exports = function solution(S, P, Q) {
   var impactResults = [];
