@@ -1,6 +1,6 @@
 // OddOccurrencesInArray
 // Find value that occurs in odd number of elements.
-// Score 100% https://codility.com/demo/results/trainingR4B228-PED/
+// Score: 100%
 
 module.exports = function solution(A) {
   var unpaired;
