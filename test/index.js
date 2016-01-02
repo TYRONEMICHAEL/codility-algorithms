@@ -7,6 +7,7 @@
 // require('./time_complexity/PermMissingElem.spec');
 // require('./time_complexity/FrogJmp.spec');
 // COUNTING ELEMENTS
-require('./counting_elements/FrogRiverOne.spec');
+// require('./counting_elements/FrogRiverOne.spec');
+require('./counting_elements/PermCheck.spec');
 // // PREFIX SUMS
 // require('./prefix_sums/GenomicRangeQuery.spec');
