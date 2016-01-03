@@ -10,5 +10,6 @@ require('./time_complexity/FrogJmp.spec');
 require('./counting_elements/FrogRiverOne.spec');
 require('./counting_elements/PermCheck.spec');
 require('./counting_elements/MissingInteger.spec');
+require('./counting_elements/MaxCounters.spec');
 // PREFIX SUMS
 require('./prefix_sums/GenomicRangeQuery.spec');
