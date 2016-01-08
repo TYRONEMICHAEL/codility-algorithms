@@ -12,5 +12,6 @@ require('./counting_elements/PermCheck.spec');
 require('./counting_elements/MissingInteger.spec');
 require('./counting_elements/MaxCounters.spec');
 // PREFIX SUMS
+require('./prefix_sums/CountDiv.spec');
 require('./prefix_sums/PassingCars.spec');
 require('./prefix_sums/GenomicRangeQuery.spec');
