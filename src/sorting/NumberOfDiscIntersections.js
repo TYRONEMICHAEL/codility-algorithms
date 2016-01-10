@@ -3,27 +3,27 @@
 // Score: 100%
 
 module.exports = function solution(A) {
-  var len =  A.length;
   var totalIntersections = 0;
   var circles = [];
 
-  for(var i = 0; i < len; i++) {
+  for(var i = 0; i < A.length; i++) {
     var right = A[i] + i;
-    var left = i - A[i];
-    circles.push([left, right]);
+    var left = i - A[i] < 0 ? 0 : i - A[i];
+    circles.push({ right: right, left: left });
   }
 
-  circles.sort(function (p, n, i) {
-    return p[0] - n[0];
+  var sortedCircles = circles.sort(function (p, n, i) {
+    return n.right - p.right;
   });
 
-  for(var ii = 0; ii < len; ii++) {
-    var circle = circles[ii];
-    for(var iii = ii + 1; iii < len; iii++) {
-      var nextCircle = circles[iii];
-      if(nextCircle[0] <= circle[1]) {
+  for(var ii = 0; ii < sortedCircles.length - 1; ii++) {
+    var circle = sortedCircles[ii];
+    
+    for(var iii = 1; iii <= sortedCircles.length - (ii + 1); iii++) {
+      var nextCircle = sortedCircles[iii + ii];
+      if((circle.left <= nextCircle.left) || nextCircle.right >= circle.left) {
         totalIntersections += 1;
-        if (totalIntersections > 10000000) {
+        if(totalIntersections > 10000000) {
           return -1;
         }
       } else {
