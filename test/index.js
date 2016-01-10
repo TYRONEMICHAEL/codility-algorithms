@@ -16,5 +16,5 @@
 // require('./prefix_sums/PassingCars.spec');
 // require('./prefix_sums/GenomicRangeQuery.spec');
 // require('./prefix_sums/MinAvgTwoSlice.spec');
-// SORTING
+//SORTING
 require('./sorting/NumberOfDiscIntersections.spec');
