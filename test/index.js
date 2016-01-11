@@ -17,4 +17,5 @@
 // require('./prefix_sums/GenomicRangeQuery.spec');
 // require('./prefix_sums/MinAvgTwoSlice.spec');
 //SORTING
-require('./sorting/NumberOfDiscIntersections.spec');
+//require('./sorting/NumberOfDiscIntersections.spec');
+require('./sorting/MaxProductOfThree.spec');
