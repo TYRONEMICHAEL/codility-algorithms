@@ -2,7 +2,7 @@
 // Find the minimal average of any slice containing at least two elements.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var index = 0;
   var minAvg = (A[0] + A[1]) / 2;
 
@@ -23,3 +23,12 @@ module.exports = function solution(A) {
 
   return index;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('MinAvgTwoSlice', function (t) {
+    t.equal(solution([4,2,2,5,1,5,8]), 1);
+    t.end();
+  });
+})();

@@ -2,7 +2,7 @@
 // Maximize A[P] * A[Q] * A[R] for any triplet (P, Q, R).
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var len = A.length;
 
   A.sort(function (a, b) {
@@ -14,3 +14,13 @@ module.exports = function solution(A) {
 
   return left > right ? left : right;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('MaxProductOfThree', function (t) {
+    t.equal(solution([-3,1,2,-2,5,6]), 60);
+    t.equal(solution([-5,1,2,-10,5,6]), 300);
+    t.end();
+  });
+})();

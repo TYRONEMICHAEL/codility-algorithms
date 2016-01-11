@@ -2,7 +2,7 @@
 // Find the missing element in a given permutation.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var arrLength = A.length + 1;
   var conSum = arrLength * (arrLength + 1) / 2;
   var arrSum = A.reduce(function (sum, val) {
@@ -11,3 +11,14 @@ module.exports = function solution(A) {
 
   return conSum - arrSum;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('PermMissingElem', function (t) {
+    t.equals(solution([2,3,1,5]), 4);
+    t.equals(solution([2,3,4]), 1);
+    t.equals(solution([1,3]), 2);
+    t.end();
+  });
+})();

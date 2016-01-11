@@ -2,7 +2,7 @@
 // Compute the number of intersections in a sequence of discs.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var len = A.length;
   var totalIntersections = 0;
   var circles = [];
@@ -35,3 +35,14 @@ module.exports = function solution(A) {
 
   return totalIntersections;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+
+  test('NumberOfDiscIntersections', function (t) {
+    t.equal(solution([1,5,2,1,4,0]), 11);
+    t.equal(solution([1,1,1]), 3);
+    t.end();
+  });
+})();

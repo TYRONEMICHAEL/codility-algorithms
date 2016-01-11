@@ -2,7 +2,7 @@
 // Find the minimal nucleotide from a range of sequence DNA.
 // Score: 100%
 
-module.exports = function solution(S, P, Q) {
+function solution(S, P, Q) {
   var impactResults = [];
   var setImpactDict = function(seq) {
     var impactDict = { A: [0], C: [0], G: [0] };
@@ -47,3 +47,15 @@ module.exports = function solution(S, P, Q) {
 
   return impactResults;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('GenomicRangeQuery', function (t) {
+    t.deepEqual(solution('CAGCCTA', [2, 5, 0], [4, 5, 6]), [2, 4, 1]);
+    t.deepEqual(solution('CAGCCTA', [0], [6]),[1]);
+    t.deepEqual(solution('A', [0], [0]), [1]);
+    t.deepEqual(solution('A', [10], [10]), [4]);
+    t.end();
+  });
+})();

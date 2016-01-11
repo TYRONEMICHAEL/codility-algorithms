@@ -4,9 +4,9 @@
   "description": "Solutions written in JS for Codility Algorithms (https://codility.com/programmers/lessons/)",
   "main": "index.js",
   "scripts": {
-    "test": "node ./test/index.js | tap-spec",
-    "test:watch": "chokidar 'test/**/*.js' 'src/**/*.js' --command 'npm run test --silent' --initial 'npm run test --silent'",
-    "coverage": "istanbul cover ./test/index.js"
+    "test": "node index.js | tap-spec && npm run coverage",
+    "test:watch": "chokidar '**/*.js' --command 'npm run test --silent' --initial 'npm run test --silent' --ignore 'node_modules' --ignore 'coverage'",
+    "coverage": "istanbul cover index.js"
   },
   "author": "Tyrone Michael Avnit <tyronemichael@gmail.com>",
   "license": "ISC",

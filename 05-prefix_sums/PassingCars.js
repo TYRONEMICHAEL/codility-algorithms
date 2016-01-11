@@ -2,7 +2,7 @@
 // Count the number of passing cars on the road.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var eastCars = 0;
   var pairs = 0;
 
@@ -22,3 +22,16 @@ module.exports = function solution(A) {
 
   return pairs;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('PassingCars', function (t) {
+    t.equal(solution([0,1,0,1,1]), 5);
+    t.equal(solution([0,1,0,1,1,1]), 7);
+    t.equal(solution([0,1,0,1,1,1,0,1]), 10);
+
+    t.end();
+  });
+
+})();

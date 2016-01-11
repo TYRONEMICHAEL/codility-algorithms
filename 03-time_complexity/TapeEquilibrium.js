@@ -2,7 +2,7 @@
 // Minimize the value |(A[0] + ... + A[P-1]) - (A[P] + ... + A[N-1])|.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var minDiff = Infinity;
   var leftSide = 0;
   var rightSide = A.reduce(function (sum, val) {
@@ -21,3 +21,13 @@ module.exports = function solution(A) {
 
   return minDiff;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('TapeEquilibrium', function (t) {
+    t.equals(solution([3,1,2,4,3]), 1);
+    t.equals(solution([-3,-1,2,4,3]), 1);
+    t.end();
+  });
+})();
