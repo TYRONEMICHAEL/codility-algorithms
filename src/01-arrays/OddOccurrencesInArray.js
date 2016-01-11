@@ -2,7 +2,7 @@
 // Find value that occurs in odd number of elements.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var unpaired;
   var unpairedDict = {};
 
@@ -21,3 +21,13 @@ module.exports = function solution(A) {
 
   return unpaired;
 };
+
+module.exports = (function() {
+  var test = require('tape');
+
+  test('OddOccurrencesInArray', function (t) {
+    t.equal(solution([9,3,9,3,9,7,9]), 7);
+    t.equal(solution([9,9,7,9,7]), 9);
+    t.end();
+  });
+})();

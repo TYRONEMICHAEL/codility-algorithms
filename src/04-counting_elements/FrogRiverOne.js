@@ -2,7 +2,7 @@
 // Find the earliest time when a frog can jump to the other side of a river.
 // Score: 100%
 
-module.exports = function solution(X, A) {
+function solution(X, A) {
   var leaves = {};
   var consecutiveLeaves = 0;
   var earliestTime = -1;
@@ -17,6 +17,15 @@ module.exports = function solution(X, A) {
       }
     }
   }
-  
+
   return earliestTime;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('FrogRiverOne', function (t) {
+    t.equal(solution(5, [1,3,1,4,2,3,5,4]), 6);
+    t.end();
+  });
+})();

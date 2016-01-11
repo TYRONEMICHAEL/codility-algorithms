@@ -2,7 +2,7 @@
 // Find the minimal positive integer not occurring in a given sequence.
 // Score: 100%
 
-module.exports = function solution(A) {
+function solution(A) {
   var numTracker = {};
   var missingElem = 1;
 
@@ -26,3 +26,12 @@ module.exports = function solution(A) {
 
   return missingElem;
 };
+
+module.exports = (function () {
+  var test = require('tape');
+
+  test('MissingInteger', function (t) {
+    t.equal(solution([1,3,6,4,1,2]), 5);
+    t.end();
+  });
+})();

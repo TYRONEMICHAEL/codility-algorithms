@@ -3,7 +3,7 @@
 // increase counter by 1; set value of all counters to current maximum.
 // Score: 100%
 
-module.exports = function solution(N, A) {
+function solution(N, A) {
   var maxCounter = 0;
   var trackedCounter = 0;
   var counters = [];
@@ -37,3 +37,12 @@ module.exports = function solution(N, A) {
 
   return counters;
 };
+
+module.exports = (function() {
+  var test = require('tape');
+
+  test('MaxCounters', function (t) {
+    t.deepEqual(solution(5, [3,4,4,6,1,4,4]), [3,2,2,4,2]);
+    t.end();
+  });
+})();
