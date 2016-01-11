@@ -1,6 +1,6 @@
-# Solutions to Codility Lessons written in Javascript
+# Solutions to Codility Algorithms written in Javascript
 
-A test environment for solutions to the [Codility Lessons](https://codility.com/programmers/lessons/).
+A test environment for solutions to the [Codility Algorithms](https://codility.com/programmers/lessons/).
 Written in Javascript together with tests and coverage. Have tests run
 continuously for easier development.
 
