@@ -4,7 +4,7 @@
   "description": "Solutions written in JS for Codility Algorithms (https://codility.com/programmers/lessons/)",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js | tap-spec && npm run coverage",
+    "test": "node index.js | tap-spec",
     "test:watch": "chokidar '**/*.js' --command 'npm run test --silent' --initial 'npm run test --silent' --ignore 'node_modules' --ignore 'coverage'",
     "coverage": "istanbul cover index.js"
   },

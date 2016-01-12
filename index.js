@@ -19,3 +19,4 @@ require('./05-prefix_sums/MinAvgTwoSlice');
 //SORTING
 require('./06-sorting/NumberOfDiscIntersections');
 require('./06-sorting/MaxProductOfThree');
+require('./06-sorting/Triangle');
