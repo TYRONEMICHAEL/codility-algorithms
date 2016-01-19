@@ -20,4 +20,6 @@
 // require('./06-sorting/NumberOfDiscIntersections');
 // require('./06-sorting/MaxProductOfThree');
 // require('./06-sorting/Triangle');
-require('./06-sorting/Distinct');
+// require('./06-sorting/Distinct');
+//BRACKETS
+require('./07-stacks_and_queues/Brackets');
