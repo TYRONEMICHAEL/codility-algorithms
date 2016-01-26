@@ -24,3 +24,4 @@ require('./06-sorting/Distinct');
 //BRACKETS
 require('./07-stacks_and_queues/Brackets');
 require('./07-stacks_and_queues/Fish');
+require('./07-stacks_and_queues/Nesting');

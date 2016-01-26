@@ -1,5 +1,4 @@
-// Distinct
-// Compute number of distinct values in an array.
+// Brackets
 // Score: 100%
 
 function solution(S) {
