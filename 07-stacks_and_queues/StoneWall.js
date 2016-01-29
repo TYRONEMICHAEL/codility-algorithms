@@ -1,4 +1,4 @@
-// Nesting
+// StoneWall
 // Score: 100%
 
 function solution(H) {
@@ -33,7 +33,7 @@ function solution(H) {
 module.exports = (function () {
   var test = require('tape');
 
-  test('Nesting', function (t) {
+  test('StoneWall', function (t) {
     t.equal(solution([8,8,5,7,9,8,7,4,8]), 7);
     t.equal(solution([1,5,7,9,7,5,7]), 5);
     t.end();
