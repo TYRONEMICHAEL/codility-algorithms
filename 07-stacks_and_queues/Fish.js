@@ -32,7 +32,7 @@ function solution(A, B) {
 module.exports = (function () {
   var test = require('tape');
 
-  test('Brackets', function (t) {
+  test('Fish', function (t) {
     t.equal(solution([4,3,2,1,5], [0,1,0,0,0]), 2);
     t.equal(solution([0,1], [1,1]), 2);
     t.equal(solution([0], [1]), 1);

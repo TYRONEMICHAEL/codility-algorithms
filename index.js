@@ -25,4 +25,7 @@
 // require('./07-stacks_and_queues/Brackets');
 // require('./07-stacks_and_queues/Fish');
 // require('./07-stacks_and_queues/Nesting');
-require('./07-stacks_and_queues/StoneWall');
+// require('./07-stacks_and_queues/StoneWall');
+// //LEADER
+// require('./08-leader/Dominator');
+require('./08-leader/EquiLeader');
