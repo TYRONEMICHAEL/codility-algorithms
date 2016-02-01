@@ -38,6 +38,7 @@ module.exports = (function () {
   test('Dominator', function (t) {
     t.equal(solution([3,4,3,2,3,-1,3,3]), 7);
     t.equal(solution([]), -1);
+    t.equal(solution([4]), 0);
     t.equal(solution([2, 1, 1, 3]), -1);
     t.end();
   });
