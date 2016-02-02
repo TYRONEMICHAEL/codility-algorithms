@@ -6,8 +6,9 @@ function solution(A) {
   var len = A.length;
   var value;
   var size = 0;
+  var count = 0;
   var numLeaders = 0;
-  var equiLeaderIndexes = [];
+  var cntLeaders = 0;
 
   for(var i = 0; i < len; i++) {
     if(size === 0) {
@@ -24,19 +25,24 @@ function solution(A) {
 
   for(var ii = 0; ii < len; ii++) {
     if(A[ii] === value) {
-      equiLeaderIndexes.push(ii);
+      count++;
     }
   }
 
-  console.log(equiLeaderIndexes);
+  value = count > (len / 2) ? value : -1;
 
-  for(var iii = 0; iii < equiLeaderIndexes.length; iii++) {
-    var index = equiLeaderIndexes[iii] + 1;
-    var prev = A.slice(0, index);
-    var next = A.slice(index, len);
+  if(value === -1) {
+    return numLeaders;
+  }
 
-    console.log(iii, prev, next);
+  for(var iii = 0; iii < len; iii++) {
+    if(A[iii] === value) {
+      cntLeaders++;
+    }
 
+    if(cntLeaders > (iii + 1) / 2 && count - cntLeaders > (len - (iii + 1)) / 2) {
+      numLeaders++;
+    }
   }
 
   return numLeaders;
@@ -47,9 +53,9 @@ module.exports = (function () {
 
   test('EquiLeader', function (t) {
     t.equal(solution([4,3,4,4,4,2]), 2);
-    // t.equal(solution([4, 4, 2, 5, 3, 4, 4, 4]), 3);
-    // t.equal(solution([]), 0);
-    // t.equal(solution([0,0]), 1);
+    t.equal(solution([0,0]), 1);
+    t.equal(solution([0,1]), 0);
+    t.equal(solution([4, 4, 2, 5, 3, 4, 4, 4]), 3);
     t.end();
   });
 })();
