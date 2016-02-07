@@ -28,4 +28,6 @@
 // require('./07-stacks_and_queues/StoneWall');
 // //LEADER
 // require('./08-leader/Dominator');
-require('./08-leader/EquiLeader');
+// require('./08-leader/EquiLeader');
+//Maximum slice problem
+require('./09-maximum_slice_problem/MaxDoubleSliceSum');
