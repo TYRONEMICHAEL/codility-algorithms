@@ -30,4 +30,5 @@
 // require('./08-leader/Dominator');
 // require('./08-leader/EquiLeader');
 //Maximum slice problem
-require('./09-maximum_slice_problem/MaxDoubleSliceSum');
+//require('./09-maximum_slice_problem/MaxDoubleSliceSum');
+require('./09-maximum_slice_problem/MaxProfit');
