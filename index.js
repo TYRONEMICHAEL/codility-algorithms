@@ -29,7 +29,9 @@
 // //LEADER
 // require('./08-leader/Dominator');
 // require('./08-leader/EquiLeader');
-//Maximum slice problem
-//require('./09-maximum_slice_problem/MaxDoubleSliceSum');
-//require('./09-maximum_slice_problem/MaxProfit');
-require('./09-maximum_slice_problem/MaxSliceSum');
+// //Maximum slice problem
+// require('./09-maximum_slice_problem/MaxDoubleSliceSum');
+// require('./09-maximum_slice_problem/MaxProfit');
+// require('./09-maximum_slice_problem/MaxSliceSum');
+// Prime and Composite Numbers
+require('./10-prime_and_composite_numbers/CountFactors');

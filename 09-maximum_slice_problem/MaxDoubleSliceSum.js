@@ -20,15 +20,10 @@ function solution(A) {
     right[i] = Math.max(right[i + 1] + A[i], 0);
   }
 
-  console.log(left, right);
-
   for(var i = 1; i < len - 1; i++) {
-    console.log(left[i-1], right[i+1], max);
     max = Math.max(left[i-1] + right[i+1],max);
   }
-
-
-
+  
   return max;
 }
 
