@@ -4,15 +4,40 @@
 
 function solution(A) {
   var len = A.length;
-  var peaks = 0;
+  var peaks = [];
+  var factors = [];
+
+  var getFactors = function(N) {
+    var i = 1;
+    var small = [];
+    var large = [];
+
+    while(i * i < len) {
+      if(len % i === 0) {
+        small.push(i);
+        large.unshift(N / i); // O(1)
+      }
+
+      i++;
+    }
+
+    return small.concat(large);
+  };
 
   for(var i = 1; i < len - 1; i++) {
     if(A[i-1] < A[i] && A[i] > A[i + 1]) {
-      peaks += 1;
+      peaks.push(i);
     }
   }
 
-  return peaks;
+  factors = getFactors(len);
+
+  for(var i = 0; i < factors.length; i++) {
+    var numBlocks = len / factors[i];
+    console.log(numBlocks);
+  }
+
+  return peaks.length;
 }
 
 module.exports = (function () {
