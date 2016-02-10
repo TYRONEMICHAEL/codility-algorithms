@@ -21,7 +21,7 @@ function solution(A) {
     }
 
     if(i * i === N) {
-      factors += 1;
+      small.push(i);
     }
 
     return small.concat(large);
@@ -34,13 +34,36 @@ function solution(A) {
   }
 
   factors = getFactors(len);
+  console.log(factors, peaks);
 
-  for(var i = 1; i < factors.length; i++) {
+  for(var i = 1; i < factors.length - 1; i++) {
     var numBlocks = len / factors[i];
-    console.log(numBlocks, factors[i]);
+    var peaksCopy = peaks.slice();
+    var blockRegion = [0, factors[i]];
+    var peaksInBlock = 0;
+
+    while(peaksCopy.length > 0) {
+      var peakIndex = peaksCopy[0] + 1;
+      if( peakIndex >= blockRegion[0] && peakIndex <= blockRegion[1]) {
+        peaksInBlock++;
+        peaksCopy.shift();
+      } else {
+        if(peaksInBlock === 0) {
+          peaksCopy = [];
+        } else {
+          blockRegion[0] = blockRegion[0] + factors[i];
+          blockRegion[1] = blockRegion[1] + factors[i];
+          peaksInBlock = 0;
+          numBlocks--;
+          if(numBlocks === 1) {
+            return len / factors[i];
+          }
+        }
+      }
+    }
   }
 
-  return peaks.length;
+  return peaks.length > 0 ? 1 : 0;
 }
 
 module.exports = (function () {
@@ -48,6 +71,9 @@ module.exports = (function () {
 
   test('Peaks', function (t) {
     t.equal(solution([1, 2, 3, 4, 3, 4, 1, 2, 3, 4, 6, 2]), 3);
+    t.equal(solution([0, 1, 0, 0, 1, 0, 0, 1, 0]), 3);
+    t.equal(solution([0]), 0);
+    t.equal(solution([0,1,2]), 0);
     t.end();
   });
 })();
