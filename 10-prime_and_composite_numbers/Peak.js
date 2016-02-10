@@ -17,8 +17,11 @@ function solution(A) {
         small.push(i);
         large.unshift(N / i); // O(1)
       }
-
       i++;
+    }
+
+    if(i * i === N) {
+      factors += 1;
     }
 
     return small.concat(large);
@@ -32,9 +35,9 @@ function solution(A) {
 
   factors = getFactors(len);
 
-  for(var i = 0; i < factors.length; i++) {
+  for(var i = 1; i < factors.length; i++) {
     var numBlocks = len / factors[i];
-    console.log(numBlocks);
+    console.log(numBlocks, factors[i]);
   }
 
   return peaks.length;
