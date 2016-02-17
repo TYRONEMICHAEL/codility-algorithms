@@ -34,7 +34,6 @@ function solution(A) {
   }
 
   factors = getFactors(len);
-  console.log(factors, peaks);
 
   for(var i = 1; i < factors.length - 1; i++) {
     var numBlocks = len / factors[i];

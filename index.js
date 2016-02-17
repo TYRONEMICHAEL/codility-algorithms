@@ -35,4 +35,5 @@
 // require('./09-maximum_slice_problem/MaxSliceSum');
 // Prime and Composite Numbers
 // require('./10-prime_and_composite_numbers/CountFactors');
-require('./10-prime_and_composite_numbers/Peak');
+//require('./10-prime_and_composite_numbers/Peak');
+require('./10-prime_and_composite_numbers/Flags');
