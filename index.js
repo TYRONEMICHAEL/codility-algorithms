@@ -16,24 +16,26 @@
 // require('./05-prefix_sums/PassingCars');
 // require('./05-prefix_sums/GenomicRangeQuery');
 // require('./05-prefix_sums/MinAvgTwoSlice');
-// //SORTING
+// // SORTING
 // require('./06-sorting/NumberOfDiscIntersections');
 // require('./06-sorting/MaxProductOfThree');
 // require('./06-sorting/Triangle');
 // require('./06-sorting/Distinct');
-// //BRACKETS
+// // BRACKETS
 // require('./07-stacks_and_queues/Brackets');
 // require('./07-stacks_and_queues/Fish');
 // require('./07-stacks_and_queues/Nesting');
 // require('./07-stacks_and_queues/StoneWall');
-// //LEADER
+// // LEADER
 // require('./08-leader/Dominator');
 // require('./08-leader/EquiLeader');
-// //Maximum slice problem
+// // Maximum slice problem
 // require('./09-maximum_slice_problem/MaxDoubleSliceSum');
 // require('./09-maximum_slice_problem/MaxProfit');
 // require('./09-maximum_slice_problem/MaxSliceSum');
-// Prime and Composite Numbers
+// // Prime and Composite Numbers
 // require('./10-prime_and_composite_numbers/CountFactors');
-//require('./10-prime_and_composite_numbers/Peak');
-require('./10-prime_and_composite_numbers/Flags');
+// require('./10-prime_and_composite_numbers/Peak');
+// require('./10-prime_and_composite_numbers/Flags');
+// Sieve of Eratosthenes
+require('./11-sieve_of_eratosthenes/CountSemiprimes');
