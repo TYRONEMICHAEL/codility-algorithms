@@ -3,53 +3,62 @@
 // Score: 100%
 
 function solution(N, P, Q) {
-  var sieve = {
-    0: { isPrime: false },
-    1: { isPrime: false }
+  var factors = [0];
+  var primes = {};
+  var semiPrimes = [];
+  var prefixSemiPrimes = [];
+  var prefixSemiPrimesCount = 0;
+  var semiPrimesCount = [];
+
+  for(var i = 0; i <= N; i++) {
+    factors[i] = 0;
   };
 
-  var primes = [];
-  var semiPrimes = [];
-
-  for(var i = 2; i <= N; i++) {
-    sieve[i] = { isPrime: true };
-  }
-
   for(var i = 2; i * i <= N; i++) {
-    if(sieve[i].isPrime) {
+    if(factors[i] === 0) {
       var k = i * i;
       while(k <= N) {
-        sieve[k] = { isPrime: false };
+        if(factors[i] === 0) {
+          factors[k] = i;
+        }
         k += i;
       }
     }
   }
 
-  for(var i = 2; i <= N; i++) {
-    if(sieve[i].isPrime) {
-      primes.push(i);
+  var factorization = function (x, F) {
+    var primeFactors = [];
+    while(F[x] > 0) {
+      primeFactors.push(F[x]);
+      x = x / F[x];
     }
-  }
+    primeFactors.push(x);
+    return primeFactors;
+  };
 
-  primes.forEach(function(val, index) {
-    for(var i = index; val * primes[i] <= N; i++) {
-      sieve[val * primes[i]].isSemiPrime = true;
+  for(var i = 0; i <= N; i++) {
+    var isSemiPrime = factorization(i, factors).length === 2;
+    if(isSemiPrime) {
+      semiPrimes[i] = 1;
+    } else{
+      semiPrimes[i] = 0;
     }
-  });
+  };
+
+  for(var i = 0; i <= N; i++) {
+    if(semiPrimes[i]) {
+      prefixSemiPrimesCount++;
+    }
+    prefixSemiPrimes.push(prefixSemiPrimesCount);
+  };
+
 
   for(var i = 0; i < P.length; i++) {
-    var semiPrimeCount = 0;
-    for(var ii = P[i]; ii <= Q[i]; ii++) {
-      if(sieve[ii].isSemiPrime) {
-        semiPrimeCount += 1;
-      }
-    }
-
-    semiPrimes.push(semiPrimeCount);
+    semiPrimesCount.push(prefixSemiPrimes[Q[i]] - prefixSemiPrimes[P[i] - 1]);
   }
 
 
-  return semiPrimes;
+  return semiPrimesCount;
 }
 
 module.exports = (function () {
