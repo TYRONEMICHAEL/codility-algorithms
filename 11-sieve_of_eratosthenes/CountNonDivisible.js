@@ -21,14 +21,13 @@ function solution(A) {
 
   for (i = 1; i <= 2*N; i++) {
     k = i;
-    while (k <= 2*N){
+    while (k <= 2*N) {
       divisors[k] += count[i];
       k += i;
     }
   }
 
-  for (i = 0; i < N; ++i){
-    console.log(A[i], divisors[A[i]], N - divisors[A[i]]);
+  for (i = 0; i < N; i++) {
     result[i] = N - divisors[A[i]];
   }
 
