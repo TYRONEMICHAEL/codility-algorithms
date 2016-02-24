@@ -38,4 +38,5 @@
 // require('./10-prime_and_composite_numbers/Peak');
 // require('./10-prime_and_composite_numbers/Flags');
 // Sieve of Eratosthenes
-require('./11-sieve_of_eratosthenes/CountSemiprimes');
+// require('./11-sieve_of_eratosthenes/CountSemiprimes');
+require('./11-sieve_of_eratosthenes/CountNonDivisible');
